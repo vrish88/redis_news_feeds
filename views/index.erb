@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>News Feed</title>
+<style>
+  body {
+    margin: 200px auto;
+    width: 400px;
+  }
+
+  ul li {
+    height: 50px;
+    margin-top: 20px;
+    list-style-type: none;
+  }
+
+  .status_update {
+    background-color: #D14747;
+  }
+
+  .photo_upload {
+    background-color: #59AB6C;
+  }
+</style>
+
+<body>
+  <h1>Bo Jackson's News Feed</h1>
+  <ul>
+    <% @feed_items.each do |item| %>
+      <li class="<%= item[:type] %>"></li>
+    <% end %>
+  </ul>
+</body>
+</html>
